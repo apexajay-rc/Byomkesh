@@ -322,35 +322,57 @@ The exporter will detect the events from:
 
 # Screenshots
 
-## Infrastructure Dashboard
+## Monitoring Stack Health
 
-```text
-screenshots/grafana-infrastructure-dashboard.png
-```
+Prometheus successfully scrapes all configured exporters.
 
-![Infrastructure Dashboard](screenshots/grafana-infrastructure-dashboard.png)
-
----
-
-## Security Dashboard
-
-```text
-screenshots/grafana-security-dashboard.png
-```
-
-![Security Dashboard](screenshots/grafana-security-dashboard.png)
+<p align="center">
+  <img src="screenshots/prometheus-targets.png" width="95%">
+</p>
 
 ---
 
-## Prometheus Targets
+## Active User Session Monitoring
 
-```text
-screenshots/prometheus-targets.png
-```
+Tracks currently logged-in users on the monitored Linux host.
 
-![Prometheus Targets](screenshots/prometheus-targets.png)
+<p align="center">
+  <img src="screenshots/active-user-sessions.png" width="95%">
+</p>
 
 ---
+
+## Running Process Monitoring
+
+Monitors process inventory changes and system activity over time.
+
+<p align="center">
+  <img src="screenshots/running-process-count.png" width="95%">
+</p>
+
+---
+
+## Listening Port Monitoring
+
+Tracks active listening ports and service exposure on the host.
+
+<p align="center">
+  <img src="screenshots/listening-port-count.png" width="95%">
+</p>
+
+---
+
+## Failed SSH Login Detection
+
+Custom security telemetry collected from Linux authentication logs.
+
+This demonstrates the end-to-end flow:
+
+SSH Failure → Auth Logs → Security Exporter → Prometheus → Visualization
+
+<p align="center">
+  <img src="screenshots/failed-ssh-logins.png" width="95%">
+</p>
 
 # Security Use Cases
 
