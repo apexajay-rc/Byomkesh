@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+
+.env
+
+grafana-data/
+prometheus-data/
+
+.DS_Store
+

@@ -1,0 +1,17 @@
+groups:
+
+- name: security_alerts
+
+  rules:
+
+  - alert: ExcessiveSSHFailures
+
+    expr: failed_ssh_logins > 5
+
+    for: 30s
+
+    labels:
+      severity: warning
+
+    annotations:
+      summary: "Multiple failed SSH logins detected"
