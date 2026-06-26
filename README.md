@@ -1,4 +1,4 @@
-# Security Infrastructure Monitoring Stack
+# BYOMKESH - Security Infrastructure Monitoring Stack
 
 <p align="center">
 
@@ -21,7 +21,7 @@
 
 Modern infrastructure monitoring tools provide excellent visibility into CPU, memory, disk, and network health, but often lack lightweight security telemetry.
 
-This project bridges that gap by combining traditional observability tooling with custom security-focused metrics exposed through a Prometheus exporter.
+Byomkesh bridges that gap by combining traditional observability tooling with custom security-focused metrics exposed through a Prometheus exporter.
 
 The result is a monitoring stack capable of visualizing both infrastructure health and basic security-relevant signals from a Linux host.
 
@@ -190,7 +190,7 @@ security-infrastructure-monitoring-stack/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/apexajay-rc/security-infrastructure-monitoring-stack.git
+git clone https://github.com/apexajay-rc/Byomkesh.git
 
 cd security-infrastructure-monitoring-stack
 ```
