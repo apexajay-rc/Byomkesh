@@ -187,4 +187,112 @@ METRICS = [
         unit="count",
         description="Failed SSH login attempts"
     ),
+
+    Metric(
+    name="cpu_user_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="user"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU time spent in user mode"
+),
+
+    Metric(
+    name="cpu_system_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="system"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU time spent in kernel mode"
+),
+
+    Metric(
+    name="cpu_idle_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="idle"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU idle percentage"
+),
+
+    Metric(
+    name="cpu_iowait_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="iowait"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU waiting for disk I/O"
+),
+
+    Metric(
+    name="cpu_irq_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="irq"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU servicing hardware interrupts"
+),
+
+    Metric(
+    name="cpu_softirq_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="softirq"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU servicing software interrupts"
+),
+
+    Metric(
+    name="cpu_nice_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="nice"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU time for niced processes"
+),
+
+    Metric(
+    name="cpu_steal_percent",
+    query='avg(rate(node_cpu_seconds_total{mode="steal"}[1m])) * 100',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="CPU steal time"
+),
+
+    Metric(
+    name="context_switches_per_second",
+    query='rate(node_context_switches_total[1m])',
+    category="cpu",
+    datatype="float",
+    unit="count/sec",
+    description="Context switches per second"
+),
+
+    Metric(
+    name="interrupts_per_second",
+    query='rate(node_intr_total[1m])',
+    category="cpu",
+    datatype="float",
+    unit="count/sec",
+    description="Hardware interrupts per second"
+),
+
+    Metric(
+    name="cpu_core_count",
+    query='count(count(node_cpu_seconds_total{mode="idle"}) by (cpu))',
+    category="cpu",
+    datatype="integer",
+    unit="count",
+    description="Logical CPU core count"
+),
+
+    Metric(
+    name="cpu_busy_percent",
+    query='100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[1m])) * 100)',
+    category="cpu",
+    datatype="float",
+    unit="percent",
+    description="Total CPU busy percentage"
+),
 ]
