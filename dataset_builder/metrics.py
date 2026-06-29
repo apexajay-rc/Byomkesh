@@ -180,8 +180,8 @@ METRICS = [
     ),
 
     Metric(
-        name="failed_ssh_login_count",
-        query="failed_ssh_login_count",
+        name="failed_ssh_logins",
+        query="failed_ssh_logins",
         category="security",
         datatype="integer",
         unit="count",
